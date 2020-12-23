@@ -88,10 +88,18 @@
                     <div class="form-group  controls">
                         <select class="form-control">
                             <option>Choisir l'année d'emission du fichier</option>
-                            @for($i=2000; $i <= date('Y'); $i++))
-                            <option value="{{ $i }}">{{ $i }}</option>
-                            @endfor; ?>
+                            @for($i=2000; $i <= date('Y'); $i++)) <option value="{{ $i }}">{{ $i }}</option>
+                                @endfor; ?>
                         </select>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">Fichier PDF ou word</span>
+                    </div>
+                    <div class="custom-file">
+                        <input type="file" class="custom-file-input" id="inputGroupFile01">
+                        <label class="custom-file-label" for="inputGroupFile01">Choisir un fichier</label>
                     </div>
                 </div>
                 <br>

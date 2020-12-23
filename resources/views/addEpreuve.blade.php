@@ -1,72 +1,106 @@
 @extends('templates.app')
-@section('header')
-<!DOCTYPE html>
-<html style="font-size: 16px;">
 
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta charset="utf-8">
-    <meta name="keywords" content="SE CONNECTIOn">
-    <meta name="description" content="">
-    <meta name="page_type" content="np-template-header-footer-from-plugin">
-    <title>Ajouter une Epreuve - Archives des cours et épreuves d’université</title>
-    <link rel="stylesheet" href="nicepage.css" media="screen">
-    <link rel="stylesheet" href="Se-connecter.css" media="screen">
-    <script class="u-script" type="text/javascript" src="jquery-1.9.1.min.js" defer=""></script>
-    <script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script>
-    <meta name="generator" content="Nicepage 3.2.3, nicepage.com">
-    <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i">
-
-    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="favicon/site.webmanifest">
-
-    <script type="application/ld+json">
-        {
-            "@context": "http://schema.org"
-            , "@type": "Organization"
-            , "name": ""
-            , "url": "index.html"
-            , "logo": "images/Webp.net-resizeimage4.png"
-            , "sameAs": []
-        }
-
-    </script>
-    <meta property="og:title" content="Connection - Archives des cours et épreuves d’université">
-    <meta property="og:type" content="website">
-    <meta name="theme-color" content="#478ac9">
-    <link rel="canonical" href="/">
-    <meta property="og:url" content="/">
-</head>
-@endsection
 @section('content')
-<section class="u-align-center u-clearfix u-grey-5 u-section-1" id="carousel_a6ae">
-    <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
-        <div class="u-border-10 u-border-palette-1-base u-container-style u-group u-group-1">
-            <div class="u-container-layout u-valign-middle-lg u-valign-middle-md u-valign-middle-sm u-valign-middle-xl u-container-layout-1">
-                <h2 class="u-align-center u-text u-text-1">Ajouter une epreuve</h2>
-                <p class="u-align-center u-text u-text-2">Completer les informations </p>
-                <div class="u-form u-form-1">
-                    <form action="#" method="POST" class="u-clearfix u-form-spacing-10 u-form-vertical u-inner-form" style="padding: 10px" source="email" name="form">
-                        <input type="hidden" id="siteId" name="siteId" value="176195">
-                        <input type="hidden" id="pageId" name="pageId" value="176220">
-                        <div class="u-form-group u-form-phone">
-                            <label for="name-31bd" class="u-label">Titre</label>
-                            <input type="tel" placeholder="Intitule de l'epreuve" id="name-31bd" name="phone" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" required="required">
-                        </div>
-                        <div class="u-form-group">
-                            <label for="email-31bd" class="u-label">Promotion</label>
-                            <input type="text" placeholder="Choisir la promotion" id="email-31bd" name="password" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" required="required">
-                        </div>
-                        <div class="u-align-center u-form-group u-form-submit">
-                            <a href="#" class="u-btn u-btn-submit u-button-style">Soumettre</a>
-                            <input type="submit" value="submit" class="u-form-control-hidden">
-                        </div>
-                    </form>
+
+<!-- Page Header -->
+<header class="masthead" style="background-image: url('img/home-bg.jpg')">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-md-10 mx-auto">
+                <div class="page-heading">
+                    <h1>Ajouter un Cours</h1>
+                    {{-- <span class="subheading">Vous avez des questions? Nous avons des réponses.</span> --}}
                 </div>
             </div>
         </div>
     </div>
-</section>
+</header>
+
+<!-- Main Content -->
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+            {{-- <p>Vous souhaitez nous contacter? Remplissez le formulaire ci-dessous pour nous envoyer un message et nous vous répondrons dans les plus brefs délais!</p> --}}
+            <form method="POST" href="#">
+                <div class="control-group">
+                    <div class="form-group floating-label-form-group controls">
+                        <label>Titre</label>
+                        <input type="text" class="form-control" placeholder="Entrer le nom du cours concerner" id="name" required data-validation-required-message="S'il vous plaît entrez votre nom.">
+                        <p class="help-block text-danger"></p>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <div class="form-group  controls">
+                        {{-- <label>Promotion</label> --}}
+                        <select class="form-control">
+                            <option>Choisir la promotion</option>
+                            <option>Bac1</option>
+                            <option>Bac2</option>
+                            <option>Bac3</option>
+                            <option>G1</option>
+                            <option>G2</option>
+                            <option>G3</option>
+                            <option>L1</option>
+                            <option>L2</option>
+                            <option>Master 1</option>
+                            <option>Master 2</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <div class="form-group  controls">
+                        {{-- <label>Promotion</label> --}}
+                        <select class="form-control">
+                            <option>Choisir la faculté</option>
+                            <option>Sciences</option>
+                            <option>Polytechnique</option>
+                            <option>Medecine</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <div class="form-group  controls">
+                        {{-- <label>Promotion</label> --}}
+                        <select class="form-control">
+                            <option>Choisir l'université</option>
+                            <option>UNILU</option>
+                            <option>ISC</option>
+                            <option>UPL</option>
+                            <option>UNH</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <div class="form-group  controls">
+                        {{-- <label>Promotion</label> --}}
+                        <select class="form-control">
+                            <option>Choisir la categorie du fichier</option>
+                            <option>Cours</option>
+                            <option>Examens</option>
+                            <option>Interrogation</option>
+                            <option>TP</option>
+                            <option>TD</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <div class="form-group  controls">
+                        <select class="form-control">
+                            <option>Choisir l'année d'emission du fichier</option>
+                            @for($i=2000; $i <= date('Y'); $i++))
+                            <option value="{{ $i }}">{{ $i }}</option>
+                            @endfor; ?>
+                        </select>
+                    </div>
+                </div>
+                <br>
+                <div id="success"></div>
+                <button type="submit" class="btn btn-primary" id="sendMessageButton">Ajouter</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<hr>
 @endsection

@@ -20,15 +20,22 @@
                       <a class="nav-link" href="/add-cours">Ajouter</a>
                   </li>
                   <span style="color:#ffffff">|</span>
+                  <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">S'identifier</a>
+                      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                          <a class="dropdown-item" href="/login">Connection</a>
+                          <div class="dropdown-divider"></div>
+                          <a class="dropdown-item" href="/signin">Inscription</a>
+                      </div>
+                  </li>
+                  <span style="color:#ffffff">|</span>
                   <li class="nav-item">
                       <a class="nav-link" href="/apropos">Apropos</a>
                   </li>
                   <li class="nav-item">
                       <a class="nav-link" href="/contact">Contact</a>
                   </li>
-                  <!-- <li class="nav-item">
-            <a class="nav-link" href="#">Se connecter</a>
-          </li> -->
+
               </ul>
           </div>
       </div>
