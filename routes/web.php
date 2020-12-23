@@ -1,6 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ExamsController;
+use App\Http\Controllers\IndexController;
+use App\Http\Controllers\DetailController;
+use App\Http\Controllers\CoursesController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,26 +17,32 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
+// Route::get('/', function () {
+//     return view('index');
+// });
 
-Route::get('/epreuve', function () {
-    return view('epreuve');
-});
+Route::get('/', [IndexController::class,'index']);
 
-Route::get('/cours', function () {
-    return view('courses');
-});
+Route::get('/epreuve', [ExamsController::class,'index']);
+
+Route::get('/cours', [CoursesController::class,'index']);
+
+Route::get('/detail/{type}/{id}', [DetailController::class,'detail']);
+
+
 
 Route::get('/contact', function () {
     return view('contact');
 });
 
+Route::get('/apropos', function () {
+    return view('about');
+});
+
 Route::get('/login', function () {
     return view('login');
 });
-
+ 
 Route::get('/signin', function () {
     return view('signin');
 });

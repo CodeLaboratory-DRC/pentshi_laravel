@@ -1,11 +1,8 @@
-@yield('header')
-<body class="u-body">
-    {{-- this is the header and menu --}}
-    @include('templates.menu')
+@include('templates.header')
+{{-- this is the header and menu --}}
+@include('templates.menu')
 
-    @yield('content')
+@yield('content')
 
-    {{-- this is footer  --}}
-    @include('templates.footer')
-</body>
-</html>
+{{-- this is footer  --}}
+@include('templates.footer')
